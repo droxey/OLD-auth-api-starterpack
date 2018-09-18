@@ -1,14 +1,10 @@
 # auth-api-starterpack
 
-<<<<<<< HEAD
 [![GitHub](https://img.shields.io/github/forks/droxey/auth-api-starterpack.svg?style=flat-square)](https://github.com/droxey/auth-api-starterpack/network)
 [![GitHub](https://img.shields.io/github/issues/droxey/auth-api-starterpack.svg?style=flat-square)](https://github.com/droxey/auth-api-starterpack/issues)
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
-Custom, authenticated API instructions and starter pack for BEW1.2 students starting their Custom Authenticated API project.
-=======
 Custom, authenticated API instructions and starter pack for BEW1.2 students!
->>>>>>> 3b5b21565ddbdec766e6ba16e3568380db282107
 
 ## Installation
 
