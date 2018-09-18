@@ -1,6 +1,6 @@
 # auth-api-starterpack
 
-Custom, authenticated API instructions and starter pack for BEW1.2 students starting their Custom Authenticated API project.
+Custom, authenticated API instructions and starter pack for BEW1.2 students!
 
 ## FYI: `#TODO` === Hint
 
