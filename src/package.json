@@ -46,6 +46,7 @@
     "body-parser": "1.18.2",
     "cors": "2.8.4",
     "debug": "^2.4.5",
+    "docsify-cli": "4.2.1",
     "dotenv": "^4.0.0",
     "express": "4.16.3",
     "express-jwt": "5.3.1",

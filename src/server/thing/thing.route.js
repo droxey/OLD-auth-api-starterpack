@@ -1,8 +1,8 @@
-const express = require("express");
+const express = require('express');
 
 const router = express.Router(); // eslint-disable-line new-cap
 
-router.route("/");
+router.route('/');
 
 // #TODO: Implement thing.route.js.
 
