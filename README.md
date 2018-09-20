@@ -8,8 +8,7 @@ Custom, authenticated API instructions and starter pack for BEW1.2 students!
 
 ## Installation
 
-1. Fork this repository on GitHub.
-1. Clone your fork locally.
+1. Fork this repository and clone your fork locally.
 1. Open the repository folder in your editor of choice:
 
     ```bash
