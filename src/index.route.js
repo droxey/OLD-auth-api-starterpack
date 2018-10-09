@@ -1,12 +1,16 @@
-const express = require('express');
-const thingRoutes = require('./server/thing/thing.route');
-const authRoutes = require('./server/auth/auth.route');
+// const express = require('express');
+// const authController = require('./server/auth/auth.controller.js');
+// const episodeController = require('./server/episode/episode.controller.js');
+// const characterController = require('./server/character/character.controller.js');
 
-const router = express.Router(); // eslint-disable-line new-cap
-
-// #TODO: Change to your model.
-router.use('/things', thingRoutes);
-
-router.use('/auth', authRoutes);
-
-module.exports = router;
+// module.exports = app => {
+//
+// const authController = require('./server/auth/auth.controller.js');
+// const episodeController = require('./server/episode/episode.controller.js');
+// const characterController = require('./server/character/character.controller.js');
+//
+// // app.use(express.json());
+// // app.use('/portlandia/user', authController);
+// // app.use('/portlandia/episode', episodeController);
+// // app.use('/portlandia/character', characterController);
+// };

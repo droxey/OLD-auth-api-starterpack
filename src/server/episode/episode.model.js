@@ -1,4 +1,5 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+
 const Schema = mongoose.Schema;
 
 const EpisodeSchema = new Schema({
@@ -10,4 +11,4 @@ const EpisodeSchema = new Schema({
   summary: String
 });
 
-module.exports = mongoose.model("Episode", EpisodeSchema);
+module.exports = mongoose.model('Episode', EpisodeSchema);

@@ -43,7 +43,9 @@
     "MVC"
   ],
   "dependencies": {
+    "bcrypt": "^3.0.1",
     "body-parser": "1.18.2",
+    "chai-http": "^4.2.0",
     "cors": "2.8.4",
     "debug": "^2.4.5",
     "docsify-cli": "4.2.1",

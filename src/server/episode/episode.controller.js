@@ -1,100 +1,91 @@
-const express = require("express");
+const express = require('express');
+
 const router = express.Router();
-const Episode = require("../models/episodes");
-// const User = require("../models/users.js");
-//index;
-router.get("/", (req, res) => {
+
+const episode = require('./episode.model.js');
+
+// const User = require('../models/users.js');
+
+//  index;
+
+router.get('/', (req, res) => {
   const currentUser = req.user;
   if (currentUser === null) {
-    return res.redirect("/portlandia/user/login");
+    res.redirect('/portlandia/user/login');
   }
   Episode.find({})
-    .then(episode => {
-      res.status(200).json({ episode, message: "Get all episodes" });
-    })
-    .catch(err => {
-      console.log(err.message);
-    });
+    .then(episode) => {
+      res.status(200).json({ episode, message: 'Get all episodes' });
+    }
+    .catch(err) => {
+     return(err.message);
+    };
 });
-//new
-router.get("/new", (req, res) => {
+//  new
+router.get('/new', (req, res) => {
   const currentUser = req.user;
   if (currentUser === null) {
-    return res.redirect("/portlandia/user/login");
+    res.redirect('/portlandia/user/login');
   }
-  res.status(200).render("episodes/new.hbs");
+  res.status(200).render('episodes/new.hbs');
 });
 
-//create
+//  create
 
-router.post("/", (req, res) => {
+router.post('/', (req, res) => {
   const episode = new Episode(req.body);
   episode.save();
   res.status(200).json({
     episode,
-    message: "You have submitted a new episode"
+    message: 'You have submitted a new episode'
   });
 });
-//     Episode.create(req.body, (err, episode) => {
-//         res.status(200)
-//             .json({
-//                 episode,
-//                 message: "You have submitted a new episode"
-//             })
-//             .catch(err => {
-//                 console.log(err.message);
-//             });
-//     });
-// });
 
-//show
-router.get("/:id", (req, res) => {
+//  show
+router.get('/:id', (req, res) => {
   const currentUser = req.user;
   if (currentUser === null) {
-    return res.redirect("/portlandia/user/login");
+    res.redirect('/portlandia/user/login');
   }
   Episode.findById(req.params.id).then(episode => {
-    res
-      .status(200)
-      .json({
-        episode,
-        message: "Here is the episode that you selected"
+    res.status(200).json({ episode,
+        message: 'Here is the episode that you selected'
       })
-      .catch(err => {
-        console.log(err.message);
-      });
+      .catch(err) => {
+        return(err) ;
+      };
   });
 });
 
-//Edit
-router.get("/:id/edit", (req, res) => {
+//  Edit
+router.get('/:id/edit', (req, res) => {
   Episode.findById(req.params.id, (err, episode) => {
-    res.render("episodes/edit.hbs", { episode });
+    res.render('episodes/edit.hbs', { episode });
   });
 });
 
-router.put("/:id", (req, res) => {
+router.put('/:id', (req, res) => {
   const currentUser = req.user;
   if (currentUser === null) {
-    return res.redirect("/portlandia/user/login");
+    res.redirect('/portlandia/user/login');
   }
   Episode.findByIdAndUpdate(req.params.id, req.body, (err, episode) => {
-    res.status(200).redirect("/");
+    res.status(200).redirect('/');
   }).catch(err => {
     console.log(err.message);
   });
 });
-//delete
-router.delete("/:id", (req, res) => {
+//  delete
+router.delete('/:id', (req, res) => {
   const currentUser = req.user;
   if (currentUser === null) {
-    return res.redirect("/portlandia/user/login");
+    res.redirect('/portlandia/user/login');
   }
   Episode.findByIdAndRemove(req.params.id, (err, episode) => {
-    res.status(200).redirect("/");
-  }).catch(err => {
-    console.log(err.message);
-  });
+    res.status(200).redirect('/');
+}).catch(err) => {
+    return (err.message);
+  };
 });
 
 module.exports = router;

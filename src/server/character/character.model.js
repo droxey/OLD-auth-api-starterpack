@@ -1,6 +1,7 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+
 const Schema = mongoose.Schema;
-// var id = new mongoose.Types.ObjectId();
+
 
 const CharacterSchema = new Schema({
   image: String,
@@ -8,4 +9,4 @@ const CharacterSchema = new Schema({
   episodes: [String]
 });
 
-module.exports = mongoose.model("Character", CharacterSchema);
+module.exports = mongoose.model('Character', CharacterSchema);

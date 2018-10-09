@@ -1,22 +1,24 @@
-const chai = require("chai");
-const chaiHttp = require("chai-http");
-const server = require("../server");
-const should = chai.should();
+const chai = require('chai');
 
-chai.use(chaiHttp);
+// const chaiHttp = require('chai-http');
 
-const agent = chai.request.agent(server);
+const server = require('../../index.js');
 
-const Episode = require("../models/episodes");
+// const should = chai.should();
+// chai.use(chaiHttp);
 
-// const { message } = require("../helpers");
+// const agent = chai.request.agent(server);
 
-describe("Episode Endpoints", () => {
-  describe("/GET All episode", () => {
-    it("should get all episode", done => {
+const character = require('./episode.model.js');
+
+// const { message } = require('../helpers');
+
+describe('Episode Endpoints', () => {
+  describe('/GET All episode', () => {
+    it('should get all episode', (done) => {
       chai
         .request(server)
-        .get("/portlandia/episode")
+        .get('/portlandia/episode')
         .end((err, res) => {
           res.should.have.status(200);
           done();
@@ -24,25 +26,25 @@ describe("Episode Endpoints", () => {
     });
   });
 
-  describe("/GET Single episode with id: 1", () => {
-    it("should get one episode with id: 1", done => {
+  describe('/GET Single episode with id: 1', () => {
+    it('should get one episode with id: 1', (done) => {
       chai
         .request(server)
-        .get("/portlandia/episode/1")
+        .get('/portlandia/episode/1')
         .end((err, res) => {
           res.should.have.status(200);
           done();
         });
     });
 
-    it("should have a keys", done => {
+    it('should have a keys', (done) => {
       chai
         .request(server)
-        .get("/portlandia/episode/_id")
+        .get('/portlandia/episode/_id')
         .end((err, res) => {
           res.should.have.status(200);
-          res.body.should.be.a("object");
-          Object.keys(res.body).should.be.eql(["image", "title", "summary"]);
+          res.body.should.be.a('object');
+          Object.keys(res.body).should.be.eql(['image', 'title', 'summary']);
           done();
         });
     });
