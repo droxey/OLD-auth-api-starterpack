@@ -2,9 +2,9 @@ const express = require('express');
 
 const router = express.Router();
 
-const character = require('./character.model.js');
+const Character = require('./character.model.js');
 
-// const user = require('../auth/auth.model.js');
+const User = require('../auth/auth.model.js');
 
 // index;
 

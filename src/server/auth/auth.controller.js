@@ -4,21 +4,27 @@ const express = require('express');
 
 const router = express.Router();
 
-const user = require('./auth.model.js');
+const User = require('./auth.model.js');
 
-// const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 
 router.get('/signup', (req, res) => {
   res.status(200).render('users/signup.hbs');
 });
 
-router.post('/signup', function(req, res) {
+router.post('/signup', (req, res) => {
+    console.log(req.body)
   // Create User and JWT
   const user = new User(req.body);
   // if (req.body.adminCode === process.env.ADMIN_CODE) {
   //     new User.isAdmin = true;
   // }
-  user.save().then(user) => {
+  user.save(function(err){
+      if (err) {
+          console.log(err)
+          return next(err)
+      }
+  }).then(user) => {
     const token = jwt.sign(
       {
         _id: user._id
