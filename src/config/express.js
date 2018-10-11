@@ -49,13 +49,13 @@ const checkAuth = (req, res, next) => {
 };
 app.use(checkAuth);
 
-// const authController = require('../server/auth/auth.controller.js');
+const authController = require('../server/auth/auth.controller.js');
 const episodeController = require('../server/episode/episode.controller.js');
 const characterController = require('../server/character/character.controller.js');
 
-// app.use('/portlandia/user', authController);
-app.use('/portlandia/episode', episodeController);
-app.use('/portlandia/character', characterController);
+app.use('/portlandia/user', authController);
+app.use('/episode', episodeController);
+app.use('/character', characterController);
 
 app.get('/', (req, res) => {
   res.render('homepage.hbs');

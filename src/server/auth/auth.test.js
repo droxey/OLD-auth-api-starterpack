@@ -1,15 +1,15 @@
 const chai = require('chai');
 
-// const chaiHttp = require('chai-http');
+const chaiHttp = require('chai-http');
 
 const server = require('../../index.js');
 
-// const should = chai.should();
-// chai.use(chaiHttp);
+const should = chai.should();
+chai.use(chaiHttp);
 
 const agent = chai.request.agent(server);
 
-// const User = require('./auth/model.js');
+const User = require('./auth/model.js');
 
 describe('User', function () {});
 // signup

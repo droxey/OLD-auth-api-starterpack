@@ -6,7 +6,7 @@ const server = require('../../index.js');
 
 const should = chai.should();
 
-// chai.use(chaiHttp);
+chai.use(chaiHttp);
 
 // const agent = chai.request.agent(server);
 
