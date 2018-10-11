@@ -49,11 +49,11 @@ const checkAuth = (req, res, next) => {
 };
 app.use(checkAuth);
 
-const authController = require('../server/auth/auth.controller.js');
+// const authController = require('../server/auth/auth.controller.js');
 const episodeController = require('../server/episode/episode.controller.js');
 const characterController = require('../server/character/character.controller.js');
 
-app.use('/portlandia/user', authController);
+// app.use('/portlandia/user', authController);
 app.use('/portlandia/episode', episodeController);
 app.use('/portlandia/character', characterController);
 
