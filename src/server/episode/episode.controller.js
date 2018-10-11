@@ -89,4 +89,15 @@ router.delete('/:id', (req, res) => {
   });
 });
 
+
+// seed
+
+// const episodeSeed = require('../models/seed.js')
+// products.get('/seed/newproducts/viaseedfile', (req, res) => {
+//   Product.insertMany(productSeeds, (err, products) => {
+//     if (err) { console.log(err) } else {
+//       res.send(products)
+//     }
+//   })
+// })
 module.exports = router;
