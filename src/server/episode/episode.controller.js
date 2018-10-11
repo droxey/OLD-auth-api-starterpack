@@ -4,24 +4,22 @@ const router = express.Router();
 
 const Episode = require('./episode.model.js');
 
-//const User = require('../models/users.js');
-
-//  index;
-
+const User = require('../auth/auth.model.js');
+// index;
 router.get('/', (req, res) => {
   // const currentUser = req.user;
   // if (currentUser === null) {
   //   res.redirect('/portlandia/user/login');
   // }
   Episode.find({})
-    .then(episode) => {
-      res.status(200).json({ episode, message: 'Get all episodes' });
-    }
-    .catch(err) => {
-     return(err.message);
-    };
+        .then(episode => {
+          res.status(200).json({ episode, message: 'Get all episodes' });
+        })
+        .catch(err => {
+          console.log(err.message);
+        });
 });
-//  new
+// new
 router.get('/new', (req, res) => {
   // const currentUser = req.user;
   // if (currentUser === null) {
@@ -41,19 +39,22 @@ router.post('/', (req, res) => {
   });
 });
 
-//  show
+
+// show
 router.get('/:id', (req, res) => {
   // const currentUser = req.user;
   // if (currentUser === null) {
   //   res.redirect('/portlandia/user/login');
   // }
   Episode.findById(req.params.id).then(episode => {
-    res.status(200).json({ episode,
-        message: 'Here is the episode that you selected'
-      })
-      .catch(err) => {
-        return(err) ;
-      };
+    res.status(200)
+            .json({
+              episode,
+              message: 'Here is the episode that you selected'
+            })
+            .catch(err => {
+              console.log(err.message);
+            });
   });
 });
 
@@ -72,8 +73,8 @@ router.put('/:id', (req, res) => {
   Episode.findByIdAndUpdate(req.params.id, req.body, (err, episode) => {
     res.status(200).redirect('/');
   }).catch(err => {
-    console.log(err.message);
-  });
+      console.log(err.message);
+    });
 });
 //  delete
 router.delete('/:id', (req, res) => {
@@ -83,9 +84,9 @@ router.delete('/:id', (req, res) => {
   // }
   Episode.findByIdAndRemove(req.params.id, (err, episode) => {
     res.status(200).redirect('/');
-}).catch(err) => {
-    return (err.message);
-  };
+  }).catch(err => {
+    console.log(err.message);
+  });
 });
 
 module.exports = router;

@@ -1,0 +1,98 @@
+body {
+    background-color: #d3d3d3;
+}
+.comment-indent {
+    margin-left: 10px;
+}
+main {
+    padding: 1em 2em;
+}
+
+form {
+    max-width: 20em;
+}
+
+a {
+    color: black;
+    text-align: center;
+}
+
+img.image {
+    width: 400px;
+}
+
+h3.post-title {
+    text-align: center;
+}
+.post {
+    padding: 100px 100px 100px 200px;
+    background-color: white;
+    width: 700px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.container {
+    display: flex;
+}
+.votes {
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.error {
+    padding: 100px 0 75px 225px;
+}
+
+.error h1 {
+    padding-left: 300px;
+    color: white;
+}
+
+.error h2 {
+    padding-left: 100px;
+    color: white;
+}
+
+.error img {
+    padding-top: 100px;
+}
+
+.footer {
+    padding-left: 250px;
+}
+.content {
+    padding-left: 100px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.posts {
+    padding: 100px 100px 100px 200px;
+    background-color: white;
+    width: 700px;
+    margin: 100px 0px 100px 300px;
+}
+img.homepage {
+    width: 400px;
+}
+
+.main h1 {
+    text-align: center;
+    padding-top: 20px;s
+}
+
+.navbar-img {
+    width: 100px;
+}
+
+button.orange {
+    background-color: #FF2300;
+    color: white;
+
+}

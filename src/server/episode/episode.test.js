@@ -9,7 +9,7 @@ const server = require('../../index.js');
 
 // const agent = chai.request.agent(server);
 
-const character = require('./episode.model.js');
+const episode = require('./episode.model.js');
 
 // const { message } = require('../helpers');
 

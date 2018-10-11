@@ -1,0 +1,23 @@
+
+          {{> header}}
+            {{> nav}}
+                <h1>Edit Character</h1>
+                 <div style='width: 30%; margin: 25px auto;'>
+                  <form method='POST' action='/portlandia/character/{{character._id}}?_method=PUT'>
+                    <div class='form-group'>
+                        <label for='Name'>Name</label><br>
+                        <input type='text' name='name' placeholder='name' value='{{character.name}}'/><br/>
+                    </div>
+                    <div class='form-group'>
+                        <label for='Episode Appearances'>Episode Appearances</label><br>
+                        <input type='text' name='episodes' placeholder='episodes' value='{{character.episodes}}'/><br/>
+                    </div>
+                    <div class='form-group'>
+                        <label for='image'>Image</label><br>
+                        <input type='text' name='image' placeholder='Image' value='{{character.image}}'/>
+                    </div>
+                    <input class='btn btn-primary' type='submit' value='Add' />
+
+
+                </form>
+            </div>
