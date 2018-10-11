@@ -4,13 +4,13 @@ const router = express.Router();
 
 const Episode = require('./episode.model.js');
 
-const User = require('../auth/auth.model.js');
+const User = require('../auth/auth.controller.js');
 // index;
 router.get('/', (req, res) => {
-  // const currentUser = req.user;
-  // if (currentUser === null) {
-  //   res.redirect('/portlandia/user/login');
-  // }
+  const currentUser = req.user;
+  if (currentUser === null) {
+    res.redirect('/portlandia/user/login');
+  }
   Episode.find({})
         .then(episode => {
           res.status(200).json({ episode, message: 'Get all episodes' });
@@ -21,10 +21,10 @@ router.get('/', (req, res) => {
 });
 // new
 router.get('/new', (req, res) => {
-  // const currentUser = req.user;
-  // if (currentUser === null) {
-  //   res.redirect('/portlandia/user/login');
-  // }
+  const currentUser = req.user;
+  if (currentUser === null) {
+    res.redirect('/portlandia/user/login');
+  }
   res.status(200).render('episodes/new.hbs');
 });
 
@@ -42,10 +42,10 @@ router.post('/', (req, res) => {
 
 // show
 router.get('/:id', (req, res) => {
-  // const currentUser = req.user;
-  // if (currentUser === null) {
-  //   res.redirect('/portlandia/user/login');
-  // }
+  const currentUser = req.user;
+  if (currentUser === null) {
+    res.redirect('/portlandia/user/login');
+  }
   Episode.findById(req.params.id).then(episode => {
     res.status(200)
             .json({
@@ -66,10 +66,10 @@ router.get('/:id/edit', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  // const currentUser = req.user;
-  // if (currentUser === null) {
-  //   res.redirect('/portlandia/user/login');
-  // }
+  const currentUser = req.user;
+  if (currentUser === null) {
+    res.redirect('/portlandia/user/login');
+  }
   Episode.findByIdAndUpdate(req.params.id, req.body, (err, episode) => {
     res.status(200).redirect('/');
   }).catch(err => {
@@ -78,10 +78,10 @@ router.put('/:id', (req, res) => {
 });
 //  delete
 router.delete('/:id', (req, res) => {
-  // const currentUser = req.user;
-  // if (currentUser === null) {
-  //   res.redirect('/portlandia/user/login');
-  // }
+  const currentUser = req.user;
+  if (currentUser === null) {
+    res.redirect('/portlandia/user/login');
+  }
   Episode.findByIdAndRemove(req.params.id, (err, episode) => {
     res.status(200).redirect('/');
   }).catch(err => {

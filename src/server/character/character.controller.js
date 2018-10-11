@@ -4,13 +4,13 @@ const router = express.Router();
 
 const Character = require('./character.model.js');
 
-const User = require('../auth/auth.model.js');
+const User = require('../auth/auth.controller.js');
 // index;
 router.get('/', (req, res) => {
-  // const currentUser = req.user;
-  // if (currentUser === null) {
-  //   res.redirect('/portlandia/user/login');
-  // }
+  const currentUser = req.user;
+  if (currentUser === null) {
+    res.redirect('/portlandia/user/login');
+  }
   Character.find({})
         .then(character => {
           res.status(200).json({ character, message: 'Get all character' });
@@ -21,11 +21,11 @@ router.get('/', (req, res) => {
 });
 // new
 router.get('/new', (req, res) => {
-  // const currentUser = req.user;
-  // if (currentUser === null) {
-  //   res.redirect('/portlandia/user/login');
-  // }
-  res.status(200).render('character/new.hbs');
+  const currentUser = req.user;
+  if (currentUser === null) {
+    res.redirect('/portlandia/user/login');
+  }
+  res.status(200).render('characters/new.hbs');
 });
 
 //  create
@@ -42,15 +42,15 @@ router.post('/', (req, res) => {
 
 // show
 router.get('/:id', (req, res) => {
-  // const currentUser = req.user;
-  // if (currentUser === null) {
-  //   res.redirect('/portlandia/user/login');
-  // }
+  const currentUser = req.user;
+  if (currentUser === null) {
+    res.redirect('/portlandia/user/login');
+  }
   Character.findById(req.params.id).then(character => {
     res.status(200)
             .json({
               character,
-              message: 'Here is the episode that you selected'
+              message: 'Here is the character that you selected'
             })
             .catch(err => {
               console.log(err.message);
@@ -66,10 +66,10 @@ router.get('/:id/edit', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  // const currentUser = req.user;
-  // if (currentUser === null) {
-  //   res.redirect('/portlandia/user/login');
-  // }
+  const currentUser = req.user;
+  if (currentUser === null) {
+    res.redirect('/portlandia/user/login');
+  }
   Character.findByIdAndUpdate(req.params.id, req.body, (err, character) => {
     res.status(200).redirect('/');
   }).catch(err => {
@@ -78,10 +78,10 @@ router.put('/:id', (req, res) => {
 });
 //  delete
 router.delete('/:id', (req, res) => {
-  // const currentUser = req.user;
-  // if (currentUser === null) {
-  //   res.redirect('/portlandia/user/login');
-  // }
+  const currentUser = req.user;
+  if (currentUser === null) {
+    res.redirect('/portlandia/user/login');
+  }
   Character.findByIdAndRemove(req.params.id, (err, character) => {
     res.status(200).redirect('/');
   }).catch(err => {

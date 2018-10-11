@@ -7,10 +7,9 @@ const router = express.Router();
 const User = require('./auth/model.js');
 
 // const bcrypt = require('bcrypt');
+
+
 //
-// router.get('/', (req, res) => {
-//     res.render('homepage.hbs');
-// });
 
 router.get('/signup', (req, res) => {
   res.status(200).render('users/signup.hbs');
