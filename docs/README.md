@@ -6,12 +6,12 @@ This project is intended to be an API that returns data and characters that have
 
 View demo here: https://github.com/kendrajmoore/portlandia-api
 
-Official documentation: https://github.com/kendrajmoore/portlandia-api/docs
+Official documentation: https://kendrajmoore.github.io/portlandia/
 
 ## Base URL
 
 ```
-$ https://wwww.heroku.com/portlandia
+$ https://kendrajmoore.github.io/portlandia/
 ```
 
 The base url contains information about all available API's resources. All responses will return data in json.
@@ -24,8 +24,8 @@ There are two available resources
 Sample requests
 
 ```
-$https://www.heroku.com/portlandia/characters
-$https://www.heroku.com/portlandia/episodes
+$https://kendrajmoore.github.io/portlandia/
+$https://kendrajmoore.github.io/portlandia/
 ```
 
 ## Characters Schema
@@ -74,7 +74,7 @@ https://kendrajmoore.com/portlandia/characters/
 ### Get all episodes
 You can access the list of characters by using the `/episode` endpoint.
 ```
-https://rickandmortyapi.com/portlandia/episode/
+https://kendrajmoore.github.io/portlandia/episode
 ```
 ```js
 
