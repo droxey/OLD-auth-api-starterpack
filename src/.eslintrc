@@ -30,7 +30,9 @@
     ],
     "no-underscore-dangle": [
       0
-    ]
+    ],
+    "prefer-arrow-callback": "off",
+    "no-unused-vars": "warn"
   },
   "env": {
     "node": true,

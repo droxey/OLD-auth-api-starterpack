@@ -13,6 +13,7 @@ mongoose.Promise = Promise;
 const mongoUri = config.mongo.host;
 mongoose.connect(
   mongoUri,
+  { useNewUrlParser: true },
   { server: { socketOptions: { keepAlive: 1 } } }
 );
 mongoose.connection.on('error', () => {

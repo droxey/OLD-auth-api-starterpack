@@ -1,0 +1,52 @@
+
+  <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+      <a href='/'>
+      <img class='navbar-img' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoOOS1aX1Lbtu2HCUE7pFUi_aVfgEiO24IQvQ6dR3t29wgos-C' alt='logo'></a>
+    <!-- <a class='navbar-brand' href='/post'>Reddit</a> -->
+    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+      <span class='navbar-toggler-icon'></span>
+    </button>
+
+    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+      <ul class='navbar-nav mr-auto'>
+            {{#if currentUser}}
+           <li class='nav-item active'>
+             <a class='nav-link' href='/'>Home</a></p>
+           </li>
+           {{#if currentUser}}
+       <li class='nav-item active'>
+         <a  class='nav-link' href='/portlandia/episode/new'> Add Episode</a>
+       </li>
+       <li class='nav-item active'>
+         <a  class='nav-link' href='/portlandia/character/new'> Add Character</a>
+       </li>
+       <li class='nav-item active'>
+           <!-- <button class='orange' type='submit'>Button</button> -->
+           <li><a href='/portlandia/user/logout'>Logout</a></li>
+           <!-- <button class='orange' href='/user/logout' type='submit'>Logout</button> -->
+       </li>
+       {{/if}}
+       {{else}}
+       <li class='nav-item active'>
+         <a class='nav-link' href='/'>Home</a></p>
+    </li>
+       <li class='nav-item active'>
+         <a class='nav-link' href='/portlandia/user/signup'>Sign Up</a>
+     </li>
+     <li class='nav-item active'>
+       <a class='nav-link' href='/portlandia/user/login'>Login</a>
+   </li>
+   <li class='nav-item active'>
+     <a class='nav-link' href='/portlandia/documenation'>Documentation</a>
+ </li>
+  <li class='nav-item active'>
+      <!-- <button class='orange' type='submit'>Button</button> -->
+      <li><a href='/portlandia/user/logout'>Logout</a></li>
+      <!-- <button class='orange' href='/user/logout' type='submit'>Logout</button> -->
+  </li>
+   {{/if}}
+      </ul>
+
+    </div>
+
+  </nav>

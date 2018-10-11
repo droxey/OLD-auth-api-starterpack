@@ -1,0 +1,28 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-img {
+    width: 200px;
+}
+
+.navbar {
+    margin-bottom: 50px;
+}
+
+.row {
+    margin-bottom: 50px;
+}
+
+.card {
+    margin: 25px 0 25px 0;
+}
+
+.card-img-top {
+    height: 400px;
+}
+
+.heading-homepage {
+    text-align: center;
+    margin: 50 0 50 0;
+}
