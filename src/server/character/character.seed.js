@@ -1,53 +1,43 @@
 
 module.exports = [
   {
-    name: 'Beans',
-    image: 'https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2',
-    episodes: 5
+    name: 'Fred',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Fred_Armisen_2014_cropped_and_retouched.jpg/220px-Fred_Armisen_2014_cropped_and_retouched.jpg',
+    episodes: 77
   },
   {
-    name: 'Beautiful Bins',
-    image: 'http://www.clipartbest.com/cliparts/9cz/rMM/9czrMMBcE.jpeg',
-    episodes: 7000
+    name: 'Carrie',
+    image: 'https://static.stereogum.com/uploads/2018/02/carrie-brownstein-2018-1517865210-640x550.jpg',
+    episodes: 77
   },
   {
-    name: 'Bones',
-    image: 'http://bluelips.com/prod_images_large/bones1.jpg',
-    episodes: 25
+    name: 'Peter',
+    image: 'https://nyoobserver.files.wordpress.com/2011/06/011511_portlandia_episode_1_t.jpg?quality=80&w=300',
+    episodes: 30
   },
   {
-    name: 'Water Rose',
-    image: 'https://image00.deviantart.net/4cac/i/2013/115/2/1/red_water_rose_by_feferest-d62zxlw.jpg',
-    episodes: 1000000
+    name: 'Nance',
+    image: 'https://www.thewrap.com/wp-content/uploads/2018/01/Carrie-Brownstein-2-Nance.jpg',
+    episodes: 30
   },
   {
-    name: 'All Natural Organic Non-GM0 Pure 100% Natural Lime',
-    image: 'http://i45.tinypic.com/2e3sbwz.jpg',
+    name: 'Dave',
+    image: 'https://video-images.vice.com/_uncategorized/1516378269176-Portlandia_S4_101_3.jpeg',
     episodes: 17
   },
   {
-    name: 'Mantis Shrimp (tamed)',
-    image: 'http://otlibrary.com/wp-content/gallery/mantis-shrimp/mantis-shrimp.jpg',
-    episodes: 887
+    name: 'Kath',
+    image: 'https://video-images.vice.com/_uncategorized/1516378269176-Portlandia_S4_101_3.jpeg',
+    episodes: 17
   },
   {
-    name: 'Kohlrabi',
-    image: 'http://www.thehealthjournals.com/wp-content/uploads/2014/02/kohlrabi-1-810x657.jpg',
-    episodes: 6
+    name: 'Nina',
+    image: 'http://media.oregonlive.com/ent_impact_tvfilm/photo/fred-armisen-portlandia-nina-ifcjpg-4c7a606a57b332ed.jpg',
+    episodes: 15
   },
   {
-    name: 'Yogalates Fitness Machine 1000',
-    image: 'https://s-media-cache-ak0.pinimage.com/564x/a8/4f/05/a84f051bf47e41382e4becd4a3d05214.jpg',
-    episodes: 3199
-  },
-  {
-    name: 'Bell Jars',
-    image: 'https://s-media-cache-ak0.pinimage.com/736x/0a/6f/b6/0a6fb62caa11cfdb68c7c12a2620c012.jpg',
-    episodes: 49.99
-  },
-  {
-    name: 'Portal to 5th Dimension',
-    image: 'https://images-assets.nasa.gov/image/PIA20912/PIA20912~thumb.jpg',
-    episodes: 1
+    name: 'Lance',
+    image: 'https://i.pinimg.com/originals/f2/2a/0c/f22a0c8ddb51032d94ea908a346819aa.jpg',
+    episodes: 15
   }
 ]
