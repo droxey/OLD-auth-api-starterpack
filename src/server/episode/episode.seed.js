@@ -1,73 +1,61 @@
 
 module.exports = [
   {
-    title: 'Beans',
-    summary: 'A small pile of beans. Buy more beans for a big pile of beans.',
+    title: 'Farm',
+    summary: 'Carrie and Fred visit a farm.',
     image: 'https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2',
-    number: 5,
-    date: 99
-  },
-  {
-    title: 'Beautiful Bins',
-    summary: 'A stack of colorful bins for your beans and bones.',
-    image: 'http://www.clipartbest.com/cliparts/9cz/rMM/9czrMMBcE.jpeg',
-    number: 7000,
-    date: 1
-  },
-  {
-    title: 'Bones',
-    summary: 'It\'s just a bag of bones.',
-    image: 'http://bluelips.com/prod_images_large/bones1.jpg',
-    number: 25,
-    date: 0
-  },
-  {
-    title: 'Water Rose',
-    image: 'https://image00.deviantart.net/4cac/i/2013/115/2/1/red_water_rose_by_feferest-d62zxlw.jpg',
-    summary: 'Beautiful, ephemeral, assembly required',
-    date: 5,
-    number: 1000000
-  },
-  {
-    title: 'All Natural Organic Non-GM0 Pure 100% Natural Lime',
-    image: 'http://i45.tinypic.com/2e3sbwz.jpg',
-    summary: 'Forget your fears of agricultural genetic engineering and take your taste buds back to the beginning of time with this authentic unaltered fruit',
-    number: 17,
-    date: 72
-  },
-  {
-    title: 'Mantis Shrimp (tamed)',
-    image: 'http://otlibrary.com/wp-content/gallery/mantis-shrimp/mantis-shrimp.jpg',
-    summary: 'Sustainably raised, cage-free, docile mantis shrimp. Makes a for a cuddly companion as long as you never make direct eye contact! Notice: this item is gluten-free, should your relationship go south',
-    number: 887,
-    date: 0
-  },
-  {
-    title: 'Kohlrabi',
-    image: 'http://www.thehealthjournals.com/wp-content/uploads/2014/02/kohlrabi-1-810x657.jpg',
-    summary: 'Get a jump on the next superfood craze. Kohlrabi\'s superiority is marked by its tricky to spell title. Text all your friends: You are going to live forever with the power of kholrabi',
-    number: 6,
-    date: 913462
-  },
-  {
-    title: 'Yogalates Fitness Machine 1000',
-    image: 'https://s-media-cache-ak0.pinimage.com/564x/a8/4f/05/a84f051bf47e41382e4becd4a3d05214.jpg',
-    summary: 'Stop wasting your time doing one exercise at a time! With the YFM1000 you can do yoga and pilates at the same time! ',
-    number: 3199,
-    date: 14
-  },
-  {
-    title: 'Bell Jars',
-    image: 'https://s-media-cache-ak0.pinimage.com/736x/0a/6f/b6/0a6fb62caa11cfdb68c7c12a2620c012.jpg',
-    summary: 'Capture the beauty of anything and don\'t let it get away! Formaldehyde sold separatey ',
-    number: 49.99,
-    date: 49
-  },
-  {
-    title: 'Portal to 5th Dimension',
-    image: 'https://images-assets.nasa.gov/image/PIA20912/PIA20912~thumb.jpg',
-    summary: 'Bored of your neighborhood? Bored of your typical vacation? Go to the 5th dimension. Please note: shipping is unavailable at this time',
     number: 1,
-    date: 54
+    season: 1
+
+
+  },
+  {
+    title: 'A Song for Portland',
+    summary: 'The mayor wants an anthem for Portland.',
+    image: 'http://www.clipartbest.com/cliparts/9cz/rMM/9czrMMBcE.jpeg',
+    number: 2,
+    season: 1
+  },
+  {
+    title: 'Aimme',
+    summary: 'Someone loves Aimee',
+    image: 'http://bluelips.com/prod_images_large/bones1.jpg',
+    number: 3,
+    season: 1
+  },
+  {
+    title: 'Mayor ',
+    image: 'https://image00.deviantart.net/4cac/i/2013/115/2/1/red_water_rose_by_feferest-d62zxlw.jpg',
+    summary: 'Carrie and Fred must find the mayor',
+    number: 4,
+    season: 1
+  },
+  {
+    title: 'Blunderbuss',
+    image: 'http://i45.tinypic.com/2e3sbwz.jpg',
+    summary: 'Um ...Portland stuff',
+    number: 5,
+    season: 1
+  },
+  {
+    title: 'Baseball',
+    image: 'http://otlibrary.com/wp-content/gallery/mantis-shrimp/mantis-shrimp.jpg',
+    summary: 'Everyone loves baseball',
+    number: 6,
+    season: 1
+  },
+  {
+    title: 'Mixologist',
+    image: 'http://www.thehealthjournals.com/wp-content/uploads/2014/02/kohlrabi-1-810x657.jpg',
+    summary: 'Wine is good',
+    number: 1,
+    season: 2
+  },
+  {
+    title: 'One Moore Episode',
+    image: 'https://s-media-cache-ak0.pinimage.com/564x/a8/4f/05/a84f051bf47e41382e4becd4a3d05214.jpg',
+    summary: 'Need more Portlandia',
+    number: 2,
+    season: 2
   }
 ]
